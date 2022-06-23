@@ -94,14 +94,14 @@ int main()
     a.a = {0.0, 0.0};
     b.a = {0.0, 0.0};
 
-    std::ofstream myfile("coords.txt", std::ofstream::out | std::ofstream::trunc);
+    std::ofstream myfile("coords.txt", std::ofstream::out | std::ofstream::trunc); // plot file with gnuplot
 
     for(int i = 0; i < 10; i++)
     {
         std::cout << a.pos << "\n";
         std::cout << b.pos << "\n";
-        //myfile << a.pos << "\n";
-        //myfile << b.pos << "\n"; 
+        myfile << a.pos << "\n";
+        myfile << b.pos << "\n"; 
         for(int i = 0; i < 100; i++)
         {
             a.lettimepass(0.01, a.ForceOnMe(b));
